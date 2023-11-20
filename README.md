@@ -1,2 +1,2 @@
 # DSA-Patterns
-A pattern based DSA exploration and study.
+A pattern based DSA approaches exploration and study new techniques on the way.
