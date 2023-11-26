@@ -8,6 +8,8 @@ https://neetcode.io/roadmap
 
 `Top Practice Question` - https://neetcode.io/practice
 
+`Visualize Every Problem, looks how a human solve this and from there thinks on pattern and logic to implement.`
+
 Other reference sources
 
 - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
@@ -31,6 +33,108 @@ Other reference sources
 - Breadth-first-search
   ✅ HashMaps
   ✅ Hea
+
+## Big O Notation
+
+- Consider the input in X axis and time in Y axis the exponential growth of the time with according to the input is calculated as O(n).
+- We may have conditions like time is growing with n/2 input, or 2n etc.. Here we don't care on the constants only care about variable input n, so it will be O(n).
+
+- O(1) : Time not change with input [here](https://youtu.be/BgLTDT03QtU?t=120), eg: array.push, array.pop, search array with index,
+  same for hashmap `{}`, hashmap insert, remove, lookup etc.. do in constant time O(1). Eg:
+
+      array.pop()
+      array[12]
+      hasmap.insert({1,2})
+
+      These all are done in linear time
+
+- O(n) : Linear growth scenario, we always consider the worst case of operation like search an item in array can be in position 1 or n, examples:
+
+      for n in list:
+      A for loop iterate through the each items in list.
+
+      sum(array)
+      iterate through the each items in list.
+
+      array.insert(2, 100) #find the position and insert in middle of array, is O(n)
+      array.remove(122) # remove in middle of array
+      print(100 in num) # search
+
+      heapq.heapify([1,2,3,4])
+      Create a heap is also running in O(N)
+
+      sub = set()
+
+      while j < len(s):
+        while s[j] in sub:
+
+      Here the main loop run N times but, second loop don't run n, it run only less than N, so complexity is not O(N2).
+       it is not always the nested loop have O(n2), it can be O(n)
+      Nested loops can have O(N) time complexity in specific scenarios where the number of iterations of the inner loop is not directly proportional to the input size (N). This typically occurs when the inner loop terminates early based on specific conditions or when the inner loop's execution time is negligible compared to the outer loop.
+
+      prefix_sum = [0] * N
+      for i in range(N):          # Outer loop
+          for j in range(i):      # Inner loop
+              prefix_sum[i] += arr[j]
+
+      Here, the total number of iterations is 1+2+3....+N, which is again the sum of the first N integers.  The inner loop computes the prefix sum for each element in the array. While the sum of the first N integer is N2, the actual work done in each iteration is proportional to N, Therefore, the overall time complexity is O(N)
+
+Sliding window algo on array also work on O(n).
+Monotonic stack/ stack algo is also O(n).
+
+- O(N2): The 2D matrix traversal or an input is traverse 2 times it will be O(N2).
+
+      def bubble_sort(arr):
+      n = len(arr)
+      for i in range(n):          # Outer loop
+          for j in range(0, n-i-1):  # Inner loop
+              if arr[j] > arr[j+1]:
+                  arr[j], arr[j+1] = arr[j+1], arr[j]
+
+      The bubble sort traverse the array in N * N times, so overall O(n2)
+      We iterate through in array like N + N-1 + N-2 + N-3 ..... + 1, ie, N*N/2. We can simplify as O(N2), [here](https://youtu.be/BgLTDT03QtU?t=518)
+
+- `O(n * m)`: Usually a traverse on the 2D array not a square
+
+- O(n3) : This is the rarest unless in a 3D array and uncommon and highest BigO notation, that can go upto O(n4).
+
+- O(logN) : Binary search usually have this O(logN) and push & pop in heap push is a common one with O(logN). It is the simplest possible complexity in most cases.
+
+  How we get it? [here](https://youtu.be/BgLTDT03QtU?t=695), the array is divided into N/2 until the 1 item array is the result, ie, n/2=1 => 1\*2 = n => 2^x = N => x = logN.
+
+- O(nlogn) : Merge sort having O(nlogn), becuase after we do recursive call with left and right split of array, we traverse array each elements for sorting.
+  Heap sort we have to built a heap with O(N) and heap soritng logic is O(Nlogn) => N + N log N, but in BigO we care on larger value only.
+
+- O(2^N) - Recursion with two branches or call it twice in function have O(2^n).Because the two functions in recursion will definitely call other 2 function, line 2*2*2\*2....etc.
+
+- O(c^N) - can be according to the time we call recursion of a constant time in function with multiple times.
+
+- O(sqrt(N)) - It is rearest complexity, eg: Get factors of a number, so we run the number sqrt and its square root recusively.
+
+- O(n!) - Factorial based function. It is the highest most in common BigO complexity. Eg algorithms are Permutation and Graph problem like travelling saleman problem.
+
+### Space Complexity BigO
+
+- Constant Space:
+  Determine the memory usage that remains constant regardless of the input size. This includes variables that do not depend on the input.
+
+      total = 0 # Constant space
+
+- Input-Dependent Space:
+  Identify memory usage that scales with the size of the input. This includes arrays, matrices, lists, or any dynamically allocated memory.
+
+        fib = [0] * (n + 1)       # Input-dependent space
+        for i in range(2, n+1):   # Input-dependent space
+
+- Auxiliary Space:
+  Differentiate between the input space (read-only) and auxiliary space (additional space used).
+- Recursion Stack:
+  For recursive algorithms, consider the space used by the call stack. Each recursive call adds a frame to the stack, and this space is proportional to the maximum depth of the recursion.
+- Dynamic Memory Allocation:
+  Take into account space allocated dynamically using functions like malloc or new and make sure to account for deallocation as well.
+
+      arr = [] # Dynamic space according to input added
+      for i in range(n): # Input-dependent space
 
 ## Identify Pattern To Use
 
