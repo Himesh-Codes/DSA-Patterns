@@ -1,5 +1,6 @@
 """
 Difficulty: Hard/Medium
+https://leetcode.com/problems/longest-consecutive-sequence/submissions/1106937146/
 
 Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
 
@@ -72,3 +73,4 @@ def longestConsecutive(nums: List[int]) -> int:
     return maxLengthOfSeq
 
 print(longestConsecutive([100,4,200,1,3,2]))
+print(longestConsecutive([300,2,400,4,1]))
