@@ -47,3 +47,21 @@ Reversing Order of Characters: Stacks can be used to reverse the order of charac
 11. Function Calls:
 
 Storing Call History: Stacks are crucial for managing function calls in programming languages. They store local variables, return addresses, and other information for each active function call, enabling proper execution and return to the correct point in the code after a function completes.
+
+12. Balancing Parentheses:
+
+Checking for balanced parentheses, brackets, or braces in an expression is a classic use case for a stack. As you encounter opening and closing symbols, you can use a stack to ensure that they are matched correctly.
+
+13. Next Greater Element:
+
+Finding the next greater (or smaller) element in an array for each element is a common problem where a stack can be utilized. It helps in maintaining a decreasing order (or increasing order) of elements in the stack as you traverse the array.
+
+14. Histogram Area:
+
+Calculating the maximum area under a histogram involves finding the nearest smaller elements for each bar. A stack can be used to efficiently determine the boundaries of each rectangle.
+
+15. Monotonic Stack:
+
+In some problems, maintaining a monotonic stack (either increasing or decreasing) can simplify the solution. This is particularly useful for finding the nearest greater or smaller element in an array.
+
+In summary, the stack data structure is versatile and finds application in various scenarios in competitive programming. Its Last-In-First-Out (LIFO) property makes it suitable for handling situations where elements need to be processed in a specific order, such as reversing or tracking nested structures.

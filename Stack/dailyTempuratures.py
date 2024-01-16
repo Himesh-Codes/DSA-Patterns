@@ -5,6 +5,8 @@ after the ith day to get a warmer temperature. If there is no future day for whi
 Difficulty: Medium
 https://leetcode.com/problems/daily-temperatures/
 
+Similar Qn: Next greater element - https://leetcode.com/problems/next-greater-element-ii/
+
 Example 1:
 
 Input: temperatures = [73,74,75,71,69,72,76,73]
