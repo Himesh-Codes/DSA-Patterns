@@ -66,7 +66,8 @@ class Solution:
 
         for index in range(0, len(temperatures)):
             tempurature = temperatures[index]
-            while len(stackTempurature) > 0:
+            # top of stack is index -1 in python
+            while len(stackTempurature) > 0 and tempurature > stackTempurature[-1]['value']:
                 tempuratureInfo = stackTempurature.pop()
 
                 if not tempuratureInfo['value'] < tempurature:
