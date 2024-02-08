@@ -42,6 +42,8 @@ Search in sorted array we can use the binary search, since the structure will be
 Best practice: Use the same input array to validate the different edge cases, with considering different element position.
 ie; here we can see [4,5,6,7,0,1,2] that mid value as 6, and see mid value if 1.
 
+Complexity: O(log N)
+
 Steps
 --------
 [4,5,6,7,0,1,2] - input 

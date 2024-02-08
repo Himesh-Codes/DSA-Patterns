@@ -52,6 +52,8 @@ If yes then check he can finish in lesser eatspeed.
 If can't finish check greater eatspeed.
 4) Keep a minimum speed noted, so if we get that until the array is done with binary search.
 
+Complexity: O((log N) * M)
+
 Edge cases
 -----------
 1) Each hour Koko eat only one pile, so here the Koko like to eat slow if he can finish all pile in given time.
