@@ -38,11 +38,14 @@ Complexity: O(NlogN)
 Solution
 ---------
 Using merge sort give O(nlogn) solution, but memory is O(logN)
-Divide and conquer approach with O(lognN) and merge the list of N size gives the O(N), for the merge sort in linked list.
+Divide and conquer approach with O(lognN) and merge the list of N size gives the O(N), for the merge sort 
+in linked list.
 
 Steps
 -------
-1) Get the middle element in linkedlist. Using fast and slow pointer concept, if slow is head (1st element) and fast is head.next(2nd element), slow pointer move in 1x speed and fast pointer in 2x speed.
+1) Get the middle element in linkedlist. Using fast and slow pointer concept, if slow is head (1st element)
+ and fast is head.next(2nd element), 
+slow pointer move in 1x speed and fast pointer in 2x speed.
 Once fast pointer is Null, the slow pointer is in mid.
 ie, 1 mid for list with size 2. 
 2 is mid of size 3 & 4, 
@@ -50,7 +53,8 @@ ie, 1 mid for list with size 2.
 4 is mid for size 7 & 8.
 So if fast pointer is in 2 * position of slow we can easily find one list mid.
 On every iteration we check fast is not None and fast.next not None (this is for odd size cases like 5, 7)
-2) To split the linkedlist into 2 equal element length, we find mid and make left - mid (make mid.next = None, so it is not more connected and splitted list), and mid.next - right.
+2) To split the linkedlist into 2 equal element length, we find mid and
+ make left - mid (make mid.next = None, so it is not more connected and splitted list), and mid.next - right.
 3) Use recursion for the divide and conquer.
 4) Merge the list after the each and every split you get from the divide and conquer is sorted.
 
