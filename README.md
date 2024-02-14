@@ -32,7 +32,16 @@ Other reference sources
 - Depth-first-search
 - Breadth-first-search
   ✅ HashMaps
-  ✅ Hea
+  ✅ Heap
+
+## Recursion
+
+---
+
+Have two rules
+
+1. when to break recursion and give output to recursive call, before recursive call.
+2. where to place the recursive call and how to use the recursive value in same function.
 
 ## Big O Notation
 
