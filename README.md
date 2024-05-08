@@ -115,9 +115,9 @@ Monotonic stack/ stack algo is also O(n).
 - O(nlogn) : Merge sort having O(nlogn), becuase after we do recursive call with left and right split of array, we traverse array each elements for sorting.
   Heap sort we have to built a heap with O(N) and heap soritng logic is O(Nlogn) => N + N log N, but in BigO we care on larger value only.
 
-- O(2^N) - Recursion with two branches or call it twice in function have O(2^n).Because the two functions in recursion will definitely call other 2 function, line 2*2*2\*2....etc.
+- O(2^N) - Recursion with two branches or call it twice in function have O(2^n).Because the two functions in recursion will definitely call other 2 function, line 2*2*2\*2....etc. (https://www.youtube.com/watch?v=NyV0d5QadWM)
 
-- O(c^N) - can be according to the time we call recursion of a constant time in function with multiple times.
+- O(c^N) - can be according to the time we call recursion of a constant time in function with multiple times. (https://www.youtube.com/watch?v=NyV0d5QadWM)
 
 - O(sqrt(N)) - It is rearest complexity, eg: Get factors of a number, so we run the number sqrt and its square root recusively.
 

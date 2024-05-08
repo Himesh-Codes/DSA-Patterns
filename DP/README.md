@@ -15,3 +15,7 @@ In the context of data structures and algorithms, dynamic programming often come
 - Matrix chain multiplication: Given a sequence of matrices, dynamic programming can be used to find the most efficient way to multiply them together.
 
 In all these cases, dynamic programming helps avoid redundant calculations by storing and reusing intermediate results, leading to significant improvements in time and space complexity compared to naive approaches.
+
+References:
+
+- Common DP patterns https://www.youtube.com/watch?v=mBNrRy2_hVs&t=36s

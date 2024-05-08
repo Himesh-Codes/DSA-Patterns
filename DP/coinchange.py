@@ -43,7 +43,7 @@ take min(dp[amount][[coin-1]), currentCount), as dp value.
 
 Solution (Optimised)
 -------------------
-Dynamic programming in bottom up approach.
+Dynamic programming in bottom up approach. Unbounded knapsack problem.
 Using 1D Dp array.
 
 Steps
