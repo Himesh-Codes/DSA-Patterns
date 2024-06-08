@@ -53,7 +53,7 @@ class Solution:
         dp = [[0] * (len(coins)) for index in range(0, amount+1)]
         for index in range(0, len(coins)):
             dp[0][index] = 1
-
+        print(dp)
         for coinindex in range(0, len(coins)):
             for sumAmount in range(1, amount+1):
                 currentSum = 0 if coinindex - 1 < 0 else dp[sumAmount][coinindex - 1]

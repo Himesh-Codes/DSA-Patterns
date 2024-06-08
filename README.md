@@ -15,6 +15,9 @@ Other reference sources
 - Common patterns ; https://leetcode.com/discuss/interview-question/448285/List-of-questions-sorted-by-common-patterns.
 - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
 - https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/
+- Company-Wise Qns: https://github.com/xizhengszhang/Leetcode_company_frequency
+- Blind 75 List: https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit#gid=0 / Personal(https://docs.google.com/spreadsheets/d/115xop-dRWCqNFRD0GypPCm8CQwtfi3W_-5OgaeezRwQ/edit#gid=0)
+- Blind 75 Solutions: https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
 
 ## Most Use DSA Patterns
 
