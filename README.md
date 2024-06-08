@@ -12,6 +12,7 @@ https://neetcode.io/roadmap
 
 Other reference sources
 
+- 20 important Patterns: https://medium.com/gitconnected/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb
 - Common patterns ; https://leetcode.com/discuss/interview-question/448285/List-of-questions-sorted-by-common-patterns.
 - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
 - https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/
