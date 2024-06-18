@@ -1,6 +1,8 @@
-from typing import List
-
-"""
+package hashing;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+/*
 Difficulty: Easy
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -37,17 +39,23 @@ Output: [1,2]
 
 
 https://leetcode.com/problems/two-sum/submissions/
+*/
 
-"""
-
-def twoSum (nums: List[int], target: int):
-    sumMap = {}
-    for index in range(0, len(nums)):
-        if (target - nums[index]) in sumMap:
-            return [sumMap[target - nums[index]], index]
-        if nums[index] not in sumMap:
-            sumMap[nums[index]] = index
-    return []
-
-print(twoSum([1,2,4,5], 7))
-print(twoSum([3,2,4], 6))
+public class TwoSum{
+    static int[] twoSum(int target, int[] array){
+        Map<Integer, Integer> indexMap = new HashMap<>();
+        for(int index=0;index<array.length; index++){
+            int diff = target - array[index];
+            if(indexMap.containsKey(diff)){
+                return new int[]{indexMap.get(diff), index};
+            }
+            indexMap.put(array[index], index);
+        }
+        return new int[]{};
+    }
+    public static void main(String args[]){
+        // Testing
+        int[] result = twoSum(7, new int[]{1,2,4,5});
+        Arrays.stream(result).forEach(System.out::println);
+    }
+}

@@ -70,6 +70,8 @@ At end of loop itertaion we replace main price with temp price.
 6) We have to do the assignation only in tempPrice array. Once the all nodes are traversed once we will do this 
 iteration from step 3, until the N times completed usually the node counts (here we take the max stops count).
 7) Then atlast return the price[dist], if price[dist] is still "inf" , return -1.
+
+Time Complexity: O(E*V)
 """
 
 from typing import List
