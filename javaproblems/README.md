@@ -45,7 +45,17 @@ Scenarios Where a Java Class Can Be Used Without a Main Method:
 
 ### Control Statements
 
-- if/else if/else:
+1. [If/Else](#ifelse)
+2. [Switch](#switch)
+3. [For](#for-loop)
+4. [For Each](#for-each)
+5. [Infinite For Loop](#infinitive-for-loop)
+6. [While](#while-loop)
+7. [Break](#break-it-breaks-inner-loop-only-if-you-use-break-statement-inside-the-inner-loop)
+8. [Continue](#continue)
+9. [Recursion](#recursion)
+
+#### if/else:
 
 ```
 if(condition 1) {
@@ -59,7 +69,7 @@ statement 2; //executes when all the conditions are false
 }
 ```
 
-- switch:
+#### switch:
 
 ```
 switch(expression){
@@ -76,7 +86,7 @@ default:
 }
 ```
 
-- for loop:
+#### for loop:
 
 ```
 for(initialization; condition; increment/decrement){
@@ -88,7 +98,7 @@ for(int i=1;i<=10;i++){
 }
 ```
 
-- for each:
+#### for each:
 
 ```
 for(data_type variable : array_name){
@@ -117,7 +127,7 @@ public static void main(String[] args) {
 }
 ```
 
-- infinitive for loop:
+#### infinitive for loop:
 
 ```
 for(;;){
@@ -125,7 +135,7 @@ for(;;){
 }
 ```
 
-- while loop:
+#### while loop:
 
 ```
 while (condition){
@@ -134,7 +144,7 @@ I ncrement / decrement statement
 }
 ```
 
-- break: It breaks inner loop only if you use break statement inside the inner loop.
+#### break: It breaks inner loop only if you use break statement inside the inner loop.
 
 ```
  for(int i=1;i<=10;i++){
@@ -146,7 +156,9 @@ I ncrement / decrement statement
     }
 ```
 
-- continue: The Java continue statement is used to continue the loop. It continues the current flow of the program and skips the remaining code at the specified condition. In case of an inner loop, it continues the inner loop only.
+#### continue:
+
+The Java continue statement is used to continue the loop. It continues the current flow of the program and skips the remaining code at the specified condition. In case of an inner loop, it continues the inner loop only.
 
 ```
 //for loop
@@ -183,6 +195,23 @@ Recursion Tips
 - Efficiency: Recursive solutions can be elegant but might not always be the most efficient. For instance, the recursive Fibonacci example has exponential time complexity, which can be optimized using memoization or iterative approaches.
 
 ### Data Structures
+
+1. [Integer](#integer)
+2. [String](#string)
+3. [Array](#array)
+4. [Arraylist (List Interface)](#arraylist)
+5. [LinkedList (List Interface)](#linkedlist)
+6. [HashSet (Set Interface)](#hashset)
+7. [LinkedHashSet (Set Interface)](#linkedhashset)
+8. [TreeSet (Sorted Set Interface)](#treeset)
+9. [HashMap (Map Interface)](#hashmapk-v)
+10. [TreeMap (Map Interface)](#treemapk-v)
+11. [LinkedHashMap (Map Interface)](#linkedhashmapk-v)
+12. [PriorityQueue (Queue Interface)](#priorityqueue)
+13. [ArrayDeque (DeQueue Interface)](#arraydeque)
+14. [LinkedList (DeQueue Interface)](#linkedlist-1)
+15. [Stack (List Other Interface)](#stack)
+16. [Vector (List Other Interface)](#vector)
 
 Primitive data types - includes byte, short, int, long, float, double, boolean and char
 Non-primitive data types - such as String, Arrays and Classes
@@ -356,7 +385,9 @@ References:
 
 ### List Interface
 
-- ArrayList<E>: Provides a resizable array, ideal for dynamic arrays where elements can be added or removed.
+#### ArrayList<E>:
+
+Provides a resizable array, ideal for dynamic arrays where elements can be added or removed.
 
 ```
 List<Integer> arrayList = new ArrayList<>();
@@ -383,7 +414,9 @@ for (String i : cars) {
 Collections.sort(cars);  // Sort cars
 ```
 
-- LinkedList<E>: Implements a doubly-linked list, useful for scenarios where frequent insertion and deletion of elements are required.
+#### LinkedList<E>:
+
+Implements a doubly-linked list, useful for scenarios where frequent insertion and deletion of elements are required.
 
 ```
 List<Integer> linkedList = new LinkedList<>();
@@ -447,7 +480,9 @@ System.out.println(cars.size());
 
 ## Set Interface
 
-- HashSet<E>: Implements a set using a hash table. Good for problems requiring unique elements and quick lookups.
+#### HashSet<E>:
+
+Implements a set using a hash table. Good for problems requiring unique elements and quick lookups.
 
 ```
 Set<Integer> hashSet = new HashSet<>();
@@ -468,11 +503,39 @@ for (String i : cars) {
 }
 ```
 
-- LinkedHashSet<E>: Maintains insertion order while ensuring unique elements.
+#### LinkedHashSet<E>:
+
+Maintains insertion order while ensuring unique elements.
+
+```
+LinkedHashSet<Integer> evenNumber = new LinkedHashSet<>();
+
+// Using add() method
+evenNumber.add(2);
+
+ArrayList<Integer> evenNumbers = new ArrayList<>();
+evenNumbers.add(2);
+// Creating a LinkedHashSet from an ArrayList
+LinkedHashSet<Integer> numbers = new LinkedHashSet<>(evenNumbers);
+
+numbers.addAll(evenNumber); //inserts all the elements of the specified collection to the linked hash set
+
+//Access elements
+Iterator<Integer> iterate = numbers.iterator();
+while(iterate.hasNext()) {
+    System.out.print(iterate.next());
+}
+
+boolean value1 = numbers.remove(5); - removes the specified element from the linked hash set
+boolean value2 = numbers.removeAll(numbers) - removes all the elements from the linked hash set
+
+```
 
 ## Sorted Set Interface
 
-- TreeSet<E>: Implements a set using a red-black tree, maintaining elements in sorted order.
+#### TreeSet<E>:
+
+Implements a set using a red-black tree, maintaining elements in sorted order.
 
 ```
 TreeSet<Integer> evenNumbers = new TreeSet<>();
@@ -510,33 +573,11 @@ numbers.retainAll(evenNumbers); //Intersection of 2 sets
 numbers.removeAll(evenNumbers); //Difference between 2 sets
 ```
 
-```
-LinkedHashSet<Integer> evenNumber = new LinkedHashSet<>();
-
-// Using add() method
-evenNumber.add(2);
-
-ArrayList<Integer> evenNumbers = new ArrayList<>();
-evenNumbers.add(2);
-// Creating a LinkedHashSet from an ArrayList
-LinkedHashSet<Integer> numbers = new LinkedHashSet<>(evenNumbers);
-
-numbers.addAll(evenNumber); //inserts all the elements of the specified collection to the linked hash set
-
-//Access elements
-Iterator<Integer> iterate = numbers.iterator();
-while(iterate.hasNext()) {
-    System.out.print(iterate.next());
-}
-
-boolean value1 = numbers.remove(5); - removes the specified element from the linked hash set
-boolean value2 = numbers.removeAll(numbers) - removes all the elements from the linked hash set
-
-```
-
 ## Map Interface
 
-- HashMap<K, V>: Implements a map using a hash table, useful for key-value pairs with quick lookups.
+#### HashMap<K, V>:
+
+Implements a map using a hash table, useful for key-value pairs with quick lookups.
 
 ```
 Map<Integer, String> hashMap = new HashMap<>();
@@ -570,13 +611,29 @@ for (String i : capitalCities.keySet()) {
 }
 ```
 
-- TreeMap<K, V>: Implements a map using a red-black tree, maintaining keys in sorted order.
+#### TreeMap<K, V>:
 
-- LinkedHashMap<K, V>: Maintains insertion order while ensuring unique keys.
+Implements a map using a red-black tree, maintaining keys in sorted order.
+
+```
+Map<Integer, String> treeMap = new TreeMap<>();
+
+```
+
+#### LinkedHashMap<K, V>:
+
+Maintains insertion order while ensuring unique keys.
+
+```
+Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
+
+```
 
 ## Queue Interface
 
-- PriorityQueue<E>: Implements a priority queue using a binary heap, useful for problems involving ordering based on priority.
+#### PriorityQueue<E>:
+
+Implements a priority queue using a binary heap, useful for problems involving ordering based on priority.
 
 ```
 Queue<Integer> priorityQueue = new PriorityQueue<>();
@@ -611,7 +668,9 @@ toArray()	//Converts a priority queue to an array and returns it.
 
 # Deque Interface
 
-- ArrayDeque<E>: Implements a resizable array as a deque (double-ended queue).
+#### ArrayDeque<E>:
+
+Implements a resizable array as a deque (double-ended queue).
 
 ```
 // Creating String type ArrayDeque
@@ -658,11 +717,19 @@ Iterator<String> desIterate = animals.descendingIterator();
 
 ```
 
-- LinkedList<E>: Also implements the Deque interface, providing a doubly-linked list.
+#### LinkedList<E>:
+
+Also implements the Deque interface, providing a doubly-linked list.
+
+```
+Deque<Integer> deque = new LinkedList<>();
+```
 
 ## Other Collections
 
-- Stack<E>: Although Stack class is part of the Java collections framework, it is recommended to use ArrayDeque for stack implementation due to better performance.
+#### Stack<E>:
+
+Although Stack class is part of the Java collections framework, it is recommended to use ArrayDeque for stack implementation due to better performance.
 
 The Stack class provides the direct implementation of the stack data structure. However, it is recommended not to use it. Instead, use the ArrayDeque class.
 
@@ -684,7 +751,9 @@ int position = animals.search("Horse");
 boolean result = animals.empty();
 ```
 
-- Vector<E>: Similar to ArrayList but synchronized. Generally, ArrayList is preferred unless thread safety is needed.
+#### Vector<E>:
+
+Similar to ArrayList but synchronized. Generally, ArrayList is preferred unless thread safety is needed.
 
 The Vector class synchronizes each individual operation. This means whenever we want to perform some operation on vectors, the Vector class automatically applies a lock to that operation.
 
@@ -709,3 +778,20 @@ removeAll() - removes all the elements
 animals.clear(); - removes all elements. It is more efficient than removeAll()
 
 ```
+
+# Troubleshooting
+
+- `Package not found issue while compiling, Error: Could not find or load main class array.LongestConsecutiveSeq
+Caused by: java.lang.ClassNotFoundException: array.LongestConsecutiveSeq` - Configure settings.json (select for the workspace which create .vscode>settings.json)
+
+  - It is becuase the Java compiler not able to find the root of the project to determine it's packages.
+    Ensure that VSCode knows where to find your source files. You may need to configure your settings.json:
+
+                      - Open the Command Palette (Ctrl+Shift+P).
+                      - Type Preferences: Open Settings (JSON).
+                      - Add or update the java.project.sourcePaths setting: Update with relative path of java root folder.
+                      ```
+                          {
+                              "java.project.sourcePaths": ["src"]
+                          }
+                      ```
