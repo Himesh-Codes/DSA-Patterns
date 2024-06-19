@@ -43,6 +43,25 @@ Scenarios Where a Java Class Can Be Used Without a Main Method:
 - Applets: Although largely obsolete, Java applets run in a web browser and do not use the main method. Instead, they use init, start, stop, and destroy methods.
 - JavaFX Applications: Application class and overriding the start method. While a main method is often included to launch the JavaFX application, it can be omitted if the javafx.application.Application.launch() method is called directly by the JavaFX runtime.
 
+### Operators
+
+````
+  OperatorType	    Category	                Precedence
+    Unary   	    postfix	                    expr++ expr--
+                    prefix  	                ++expr --expr +expr -expr ~ !
+    Arithmetic      multiplicative	            * / %
+                    additive    	            + -
+    Shift   	    shift	                    << >> >>>
+    Relational  	comparison	                < > <= >= instanceof
+                    equality    	            == !=
+    Bitwise 	    bitwise AND	                &
+                    bitwise exclusive OR	    ^
+                    bitwise inclusive OR	    |
+    Logical 	    logical AND	                &&
+                    logical  OR	                ||
+    Ternary 	    ternary	                    ? :
+    Assignment  	assignment	                = += -= *= /= %= &= ^= |= <<= >>= >>>=
+```
 ### Control Statements
 
 1. [If/Else](#ifelse)
@@ -212,6 +231,7 @@ Recursion Tips
 14. [LinkedList (DeQueue Interface)](#linkedlist-1)
 15. [Stack (List Other Interface)](#stack)
 16. [Vector (List Other Interface)](#vector)
+17. [Stream](#vector)
 
 Primitive data types - includes byte, short, int, long, float, double, boolean and char
 Non-primitive data types - such as String, Arrays and Classes
@@ -223,6 +243,18 @@ char myLetter = 'D';         // Character
 boolean myBool = true;       // Boolean
 String myText = "Hello";     // String
 ```
+In Java, each primitive data type has a corresponding wrapper class in the java.lang package. Wrapper classes are used to convert primitive data types into objects.
+Each primitive data type in Java has a corresponding wrapper class:
+
+byte -> Byte
+short -> Short
+int -> Integer
+long -> Long
+float -> Float
+double -> Double
+char -> Character
+boolean -> Boolean
+These wrapper classes are useful for working with collections, performing utility operations, and dealing with null values.
 
 #### Integer:
 
@@ -779,6 +811,83 @@ animals.clear(); - removes all elements. It is more efficient than removeAll()
 
 ```
 
+### Stream
+
+https://www.baeldung.com/java-8-streams-introduction
+Streams can be created from different element sources e.g. collections or arrays with the help of stream() and of() methods:
+
+```
+String[] arr = new String[]{"a", "b", "c"};
+Stream<String> stream = Arrays.stream(arr);
+stream = Stream.of("a", "b", "c");
+```
+
+- Multi-threading With Streams
+  Stream API also simplifies multithreading by providing the parallelStream() method that runs operations over the stream’s elements in parallel mode.
+
+```
+list.parallelStream().forEach(element -> doWork(element));
+```
+
+- Stream Operations
+
+#### Iterating
+
+Stream API helps to substitute for, for-each, and while loops
+
+```
+boolean isExist = list.stream().anyMatch(element -> element.contains("a"));
+```
+
+#### Filtering
+
+```
+Stream<String> stream = list.stream().filter(element -> element.contains("d"));
+```
+
+#### Mapping
+
+```
+boolean isValid = list.stream().anyMatch(element -> element.contains("h")); // true
+boolean isValidOne = list.stream().allMatch(element -> element.contains("h")); // false
+boolean isValidTwo = list.stream().noneMatch(element -> element.contains("h")); // false
+
+Stream.empty().allMatch(Objects::nonNull); // true
+```
+
+#### Reduction
+
+Stream API allows reducing a sequence of elements to some value according to a specified function with the help of the reduce() method of the type Stream
+
+```
+List<Integer> integers = Arrays.asList(1, 1, 1);
+Integer reduced = integers.stream().reduce(23, (a, b) -> a + b);
+```
+
+#### Collecting
+
+The reduction can also be provided by the collect() method of type Stream.
+This operation is very handy in case of converting a stream to a Collection or a Map and representing a stream in the form of a single string.
+
+```
+List<String> resultList
+  = list.stream().map(element -> element.toUpperCase()).collect(Collectors.toList());
+```
+
+### Alternative APIs
+
+- (num in numArray) :
+
+```
+//For arrays of objects, you can convert the array to a List and use the contains method.
+Arrays.asList(arr).contains(target);
+
+//Using stream API
+Arrays.stream(arr).anyMatch(target::equals);
+boolean isExist = list.stream().anyMatch(element -> element.contains("a"));
+
+```
+
 # Troubleshooting
 
 - `Package not found issue while compiling, Error: Could not find or load main class array.LongestConsecutiveSeq
@@ -795,3 +904,4 @@ Caused by: java.lang.ClassNotFoundException: array.LongestConsecutiveSeq` - Conf
                               "java.project.sourcePaths": ["src"]
                           }
                       ```
+````

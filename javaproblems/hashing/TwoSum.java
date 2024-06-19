@@ -42,14 +42,14 @@ https://leetcode.com/problems/two-sum/submissions/
 */
 
 public class TwoSum{
-    static int[] twoSum(int target, int[] array){
+    static int[] twoSum(int target, int[] nums){
         Map<Integer, Integer> indexMap = new HashMap<>();
-        for(int index=0;index<array.length; index++){
-            int diff = target - array[index];
+        for(int index=0; index < nums.length; index++){
+            int diff = target - nums[index];
             if(indexMap.containsKey(diff)){
                 return new int[]{indexMap.get(diff), index};
             }
-            indexMap.put(array[index], index);
+            indexMap.put(nums[index], index);
         }
         return new int[]{};
     }
