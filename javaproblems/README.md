@@ -910,7 +910,3 @@ Caused by: java.lang.ClassNotFoundException: array.LongestConsecutiveSeq` - Conf
 
   - Refresh the Project: Sometimes, refreshing the project in VSCode can help.
     Use the Java: Clean Java Language Server Workspace command from the Command Palette to refresh the project.
-
-```
-
-```
