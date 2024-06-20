@@ -45,23 +45,24 @@ Scenarios Where a Java Class Can Be Used Without a Main Method:
 
 ### Operators
 
-````
-  OperatorType	    Category	                Precedence
-    Unary   	    postfix	                    expr++ expr--
-                    prefix  	                ++expr --expr +expr -expr ~ !
-    Arithmetic      multiplicative	            * / %
-                    additive    	            + -
-    Shift   	    shift	                    << >> >>>
-    Relational  	comparison	                < > <= >= instanceof
-                    equality    	            == !=
-    Bitwise 	    bitwise AND	                &
-                    bitwise exclusive OR	    ^
-                    bitwise inclusive OR	    |
-    Logical 	    logical AND	                &&
-                    logical  OR	                ||
-    Ternary 	    ternary	                    ? :
-    Assignment  	assignment	                = += -= *= /= %= &= ^= |= <<= >>= >>>=
 ```
+  OperatorType	   Category	                Precedence
+    Unary   	      postfix	                    expr++ expr--
+                    prefix  	                  ++expr --expr +expr -expr ~ !
+    Arithmetic      multiplicative	            * / %
+                    additive    	              + -
+    Shift   	      shift	                      << >> >>>
+    Relational  	  comparison	                < > <= >= instanceof
+                    equality    	              == !=
+    Bitwise 	      bitwise AND	                &
+                    bitwise exclusive OR	      ^
+                    bitwise inclusive OR	      |
+    Logical 	      logical AND	                &&
+                    logical  OR	                ||
+    Ternary 	      ternary	                    ? :
+    Assignment  	  assignment	                = += -= *= /= %= &= ^= |= <<= >>= >>>=
+```
+
 ### Control Statements
 
 1. [If/Else](#ifelse)
@@ -243,6 +244,7 @@ char myLetter = 'D';         // Character
 boolean myBool = true;       // Boolean
 String myText = "Hello";     // String
 ```
+
 In Java, each primitive data type has a corresponding wrapper class in the java.lang package. Wrapper classes are used to convert primitive data types into objects.
 Each primitive data type in Java has a corresponding wrapper class:
 
@@ -339,6 +341,7 @@ System.out.println(firstName.concat(lastName)); // concat to firstname
 
 String myStr = "Hello";
 char result = myStr.charAt(0);
+char[] result = s.toCharArray();
 
 String myStr1 = "Hello";
 String myStr2 = "Hello";
@@ -904,4 +907,10 @@ Caused by: java.lang.ClassNotFoundException: array.LongestConsecutiveSeq` - Conf
                               "java.project.sourcePaths": ["src"]
                           }
                       ```
-````
+
+  - Refresh the Project: Sometimes, refreshing the project in VSCode can help.
+    Use the Java: Clean Java Language Server Workspace command from the Command Palette to refresh the project.
+
+```
+
+```

@@ -21,7 +21,12 @@ Constraints:
 1 <= s.length <= 1000
 s consist of only digits and English letters.
 
-Solution (1D DP)
+Solution (Brute Force) - Time Complexity: O(N3)
+-----------------------
+Taking each and every char in a string and create substrings from start left to end right ( it is O(N2)), 
+and determine whether developed substring is a palindrome (it is O(N)).
+
+Solution (1D DP) - Optimised
 -----------------
 - Spread wide concept.
 - Considering each index in string array as the starting point and spread equally to left and right and see the possibility of palindromes.

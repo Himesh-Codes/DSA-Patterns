@@ -19,3 +19,4 @@ In all these cases, dynamic programming helps avoid redundant calculations by st
 References:
 
 - Common DP patterns https://www.youtube.com/watch?v=mBNrRy2_hVs&t=36s
+- DP patterns sheet - https://docs.google.com/spreadsheets/d/14VDA1KjrHQ_B3Zz763J4KCcK0l0r3AE6wS085Xp08bU/edit?gid=0#gid=0
