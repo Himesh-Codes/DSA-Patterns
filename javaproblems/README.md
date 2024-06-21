@@ -258,6 +258,29 @@ char -> Character
 boolean -> Boolean
 These wrapper classes are useful for working with collections, performing utility operations, and dealing with null values.
 
+### Java Lambda Expressions
+
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+
+```
+parameter -> expression
+
+//To use more than one parameter, wrap them in parentheses
+(parameter1, parameter2) -> expression
+
+(parameter1, parameter2) -> { code block }
+numbers.forEach( (n) -> { System.out.println(n); } );
+
+StringFunction exclaim = (s) -> s + "!";
+StringFunction ask = (s) -> s + "?";
+printFormatted("Hello", exclaim);
+printFormatted("Hello", ask);
+public static void printFormatted(String str, StringFunction format) {
+    String result = format.run(str);
+    System.out.println(result);
+}
+```
+
 #### Integer:
 
 Integer class is a wrapper class for the primitive type int which contains several methods to effectively deal with an int value like converting it to a string representation, and vice-versa.
@@ -630,6 +653,16 @@ capitalCities.clear();
 
 capitalCities.size();
 
+// Add new entries only if they don't exist
+capitalCities.putIfAbsent("Canada", "Ottawa");
+
+//Write all of the entries from another map into this one
+HashMap<String, String> moreCities = new HashMap<String, String>();
+    moreCities.put("Canada", "Ottawa");
+    moreCities.put("Japan", "Tokyo");
+
+    capitalCities.putAll(moreCities);
+
 // Print keys
 for (String i : capitalCities.keySet()) {
   System.out.println(i);
@@ -699,6 +732,28 @@ contains(element); //Searches the priority queue for the specified element. If t
 size()	//Returns the length of the priority queue.
 
 toArray()	//Converts a priority queue to an array and returns it.
+
+//Custom comporator
+PriorityQueue<Pair> pq = new PriorityQueue<Pair>((x, y) -> x.distance - y.distance);
+PriorityQueue<Integer> numbers = new PriorityQueue<>(new CustomComparator());
+
+class CustomComparator implements Comparator<Integer> {
+
+    @Override
+    public int compare(Integer number1, Integer number2) {
+        int value =  number1.compareTo(number2);
+        // elements are sorted in reverse order
+        if (value > 0) {
+            return -1;
+        }
+        else if (value < 0) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+}
 ```
 
 # Deque Interface
