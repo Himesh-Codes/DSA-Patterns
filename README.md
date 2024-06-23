@@ -14,11 +14,27 @@ Other reference sources
 
 - 20 important Patterns: https://medium.com/gitconnected/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb
 - Common patterns ; https://leetcode.com/discuss/interview-question/448285/List-of-questions-sorted-by-common-patterns.
+- Common Patterns Questions Sorted: https://www.linkedin.com/posts/alexandre-zajac_softwareengineering-coding-programming-activity-7209442364900204546-071Z?utm_source=share&utm_medium=member_desktop
 - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+- FAANG must do: https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
 - https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/
+- Popular List: https://leetcode.com/discuss/interview-question/2016707/Company-wise-:-Most-popular-Coding-Questions
 - Company-Wise Qns: https://github.com/xizhengszhang/Leetcode_company_frequency
 - Blind 75 List: https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit#gid=0 / Personal(https://docs.google.com/spreadsheets/d/115xop-dRWCqNFRD0GypPCm8CQwtfi3W_-5OgaeezRwQ/edit#gid=0)
 - Blind 75 Solutions: https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
+- AI tool : https://roadmap.sh/
+- https://www.linkedin.com/posts/alexandre-zajac_softwareengineering-coding-programming-activity-7181538559999238144-lwW8?utm_source=share&utm_medium=member_desktop
+
+### Company wise Search Qns
+
+- GFG Qns sort with company/level(medium)/topic: https://www.geeksforgeeks.org/explore?page=2&company=Goldman%20Sachs&difficulty=Medium,Hard&sortBy=submissions
+- Company wise topic/guide: https://www.geeksforgeeks.org/company-preparation/?ref=lbp
+  Take topic from above https://www.geeksforgeeks.org/goldman-sachs-topics-interview-preparation/.
+- Select the topics and see company tags on qns: https://workat.tech/problem-solving/topics/binary-trees/practice
+- InterviewBit Filter with company name: https://www.interviewbit.com/search/?q%5B%5D=Goldman+Sachs
+- Code 360 by CodingNinja Naukri, filter with topic/company/difficulty (medium): https://www.naukri.com/code360/problem-lists/top-google-coding-interview-questions?practice_topic[]=Graph&company[]=Goldman%20Sachs&difficulty[]=Medium&difficulty[]=Hard
+- Leetcode discussion (search with year 2024) https://leetcode.com/discuss/interview-experience/1069708/Goldman-Sachs-Associate-or-3%2B-Years-Experience-or-Offer
+- Use Glassdoor to see any latest interview qns: https://www.glassdoor.co.in/Interview/Microsoft-Interview-Questions-E1651.htm
 
 ## Most Use DSA Patterns
 

@@ -493,6 +493,10 @@ cars2.set(0, "Toyota"); //set a specific item with index
 
 cars.clear();
 
+
+Queue<Integer> queue = new LinkedList<>();
+boolean containsElement1 = queue.contains(elementToCheck1);
+
 cars.forEach( (car) -> { System.out.println(car); } );
 
 getFirst()	//Returns the first item in the list
@@ -777,6 +781,9 @@ animals.offer("Dog"); - inserts the specified element at the end of the array de
 animals.offerFirst("Cat"); - inserts the specified element at the beginning of the array deque
 animals.offerLast("Horse"); - inserts the specified element at the end of the array deque
 
+Queue<Integer> queue = new ArrayDeque<>();
+boolean containsElement1 = queue.contains(elementToCheck1);
+
 String firstElement = animals.getFirst(); // Get the first element
 
 String lastElement = animals.getLast();// Get the last element
@@ -813,6 +820,10 @@ Also implements the Deque interface, providing a doubly-linked list.
 
 ```
 Deque<Integer> deque = new LinkedList<>();
+
+
+Queue<Integer> queue = new LinkedList<>();
+boolean containsElement1 = queue.contains(elementToCheck1);
 ```
 
 ## Other Collections
