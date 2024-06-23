@@ -1,7 +1,9 @@
 package hashing;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
 /*
 Difficulty: Easy
 
@@ -39,23 +41,25 @@ Output: [1,2]
 
 
 https://leetcode.com/problems/two-sum/submissions/
-*/
+ */
 
-public class TwoSum{
-    static int[] twoSum(int target, int[] nums){
+public class TwoSum {
+
+    static int[] twoSum(int target, int[] nums) {
         Map<Integer, Integer> indexMap = new HashMap<>();
-        for(int index=0; index < nums.length; index++){
+        for (int index = 0; index < nums.length; index++) {
             int diff = target - nums[index];
-            if(indexMap.containsKey(diff)){
+            if (indexMap.containsKey(diff)) {
                 return new int[]{indexMap.get(diff), index};
             }
             indexMap.put(nums[index], index);
         }
         return new int[]{};
     }
-    public static void main(String args[]){
+
+    public static void main(String args[]) {
         // Testing
-        int[] result = twoSum(7, new int[]{1,2,4,5});
+        int[] result = twoSum(7, new int[]{1, 2, 4, 5});
         Arrays.stream(result).forEach(System.out::println);
     }
 }

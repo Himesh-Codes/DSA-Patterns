@@ -285,6 +285,15 @@ public static void printFormatted(String str, StringFunction format) {
 
 Integer class is a wrapper class for the primitive type int which contains several methods to effectively deal with an int value like converting it to a string representation, and vice-versa.
 
+- Math
+
+```
+Math.floorDiv(7, 3)
+
+Math.abs()
+Math.min() / Math.max()
+```
+
 - toString():
 
 ```
@@ -422,6 +431,8 @@ System.out.println(Arrays.compare(cars, cars2));
 
  // copying array org to copy
 int[] copy = Arrays.copyOf(org, 5);
+
+int[] rangeCopy = Arrays.copyOfRange(org, 0, 2);
 
 Arrays.sort(cars); //sort ascending
 

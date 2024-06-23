@@ -69,9 +69,9 @@ class Solution:
         rightIndex = len(height) - 1
 
         # while both elevations are non zero
-        while leftIndex != 0 and rightIndex != 0:
-            if leftIndex == 0 : leftIndex += 1
-            if rightIndex == 0 : rightIndex -= 1
+        while height[leftIndex] == 0 and height[rightIndex] == 0 and leftIndex != rightIndex:
+            if height[leftIndex] == 0 : leftIndex += 1
+            if height[rightIndex] == 0 : rightIndex -= 1
         
         while leftIndex != rightIndex:
             if height[leftIndex] < height[rightIndex]:
