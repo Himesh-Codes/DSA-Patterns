@@ -8,6 +8,8 @@ https://neetcode.io/roadmap
 
 `Top Practice Question` - https://neetcode.io/practice
 
+`Draw a picture of the problem to understand how it work`
+`Split problem into small subproblem and solve each of them.`
 `Visualize Every Problem, looks how a human solve this and from there thinks on pattern and logic to implement.`
 
 Other reference sources

@@ -371,6 +371,12 @@ System.out.println(txt.indexOf("locate")); // Outputs 7
 System.out.println(firstName + " " + lastName); //concatination
 System.out.println(firstName.concat(lastName)); // concat to firstname
 
+//String concatination on any iterators
+ArrayDeque<String> stack = new ArrayDeque<>();
+stack.add("(");
+stack.add(")");
+String parenthesis = String.join("", stack);
+
 String myStr = "Hello";
 char result = myStr.charAt(0);
 char[] result = s.toCharArray();
