@@ -25,6 +25,12 @@ The number of nodes in the tree is in the range [0, 100].
 
 Solution
 ---------
+ * Have 2 Approaches
+ * 1- Is using a queue and doing BFS (Time Complexity: O(n2), Space Complexity: O(N))
+ * 2- Doing recursion in order right() and left(), so after right the recursion go to right,
+ * If both all null return to root parent. 
+ * (Time Complexity: O(n), Space Complexity: O(1)), check in Java solution.
+
 Using the BFS traversal of the tree but in a tricky way.
 BFS traversal is the level order traversal in tree.
 

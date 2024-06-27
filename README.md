@@ -12,7 +12,7 @@ https://neetcode.io/roadmap
 `Split problem into small subproblem and solve each of them.`
 `Visualize Every Problem, looks how a human solve this and from there thinks on pattern and logic to implement.`
 
-Other reference sources
+### Other reference sources
 
 - 20 important Patterns: https://medium.com/gitconnected/dont-just-leetcode-follow-the-coding-patterns-instead-4beb6a197fdb
 - Common patterns ; https://leetcode.com/discuss/interview-question/448285/List-of-questions-sorted-by-common-patterns.
@@ -656,3 +656,8 @@ Attribute atleast 3-4 months to this section while solving 2-3 leetcode question
 You can refer to the Gate Smashers playlist on YouTube to study the concepts, and questions on GeeksforGeeks can really complement your preparation.
 
 Last but not least, basic skills like communication also help during the interviews, so make sure you are able to explain the solution to the interviewer.
+
+## Preparation References
+
+- Google Prep: https://medium.com/swlh/my-preparation-journey-for-google-interviews-f41e2dc3cdf9
+- Agoda Prep: https://medium.com/agoda-engineering/preparing-for-interview-at-agoda-2c07b7d13ca5
