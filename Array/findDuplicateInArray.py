@@ -37,15 +37,21 @@ Solution
 
 Solution (Optimised)
 ---------
-1) As constraint state, the n as the length of array, it is for sure that number will be present atleast (1 <= nums[i] <= n).
+1) As constraint state, the n as the length of array, 
+it is for sure that number will be present atleast (1 <= nums[i] <= n).
  Leverage the use of same array space and use the technique "Negative the element".
 2) Here trip is to use the array number value as index and make it negative. 
-when an element is traversed, we need to see element visited, so we can leverage use of array index and make the element negative.
-ie, if num is 3 in array at current traversal we make nums[3-1] *= -1 multiple the element by -1 that makes the index element as negative.
-And when same element occured in future we see the same index here 3 comes second time and since already nums[3-1] is negative we can add it is duplicate.
-3) Everytime before we compare we take the positive value of element only, since the possibility of element become negative on above step is there.
+when an element is traversed, we need to see element visited, 
+so we can leverage use of array index and make the element negative.
+ie, if num is 3 in array at current traversal we make nums[3-1] *= -1 multiple the element by -1 
+that makes the index element as negative.
+And when same element occured in future we see the same index here 3 comes second time 
+and since already nums[3-1] is negative we can add it is duplicate.
+3) Everytime before we compare we take the positive value of element only,
+ since the possibility of element become negative on above step is there.
 We can use abs here.
-4) Iterate until the element in array is traversed (we can use range to define the original array length).
+4) Iterate until the element in array is traversed (we can use range to define
+ the original array length).
 """
 from typing import List
 

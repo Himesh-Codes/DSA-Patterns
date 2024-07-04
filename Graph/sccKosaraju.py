@@ -1,7 +1,7 @@
 """
 Strongly Connected Components (SCC)
 Difficulty: Medium
-https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo
+https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1
 
 Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges,
 Find the number of strongly connected components in the graph.
@@ -137,5 +137,5 @@ class Solution:
 edges = [[1, 0], [0, 2],[2, 1], [0, 3],[3, 4]]
 edges1 = [[0, 1], [1, 2],[2, 0], [2, 3],[3, 4], [4, 5], [5, 6], [6, 7], [4, 7], [6, 4]]
 sol = Solution()
-print(sol.kosaraju(5, edges1))
+print(sol.kosaraju(8, edges1))
 print(sol.kosaraju(5, edges))

@@ -35,11 +35,14 @@ Constraints:
 Solution
 ---------
 BFS solution, with visited array.
-1) Start and End point should be considered as {x-1, y-1}, {a-1, b-1}, since the coordinates in chess board are considered as array matrix.
+1) Start and End point should be considered as {x-1, y-1}, {a-1, b-1}, 
+since the coordinates in chess board are considered as array matrix.
 In which the array size is given as argument "N", ie, matrix of NxN.
-2) Add starting point into the queue, while pop the items in current queue add it's adjacent coordinates, 8 positions into adjQueue,
+2) Add starting point into the queue, 
+while pop the items in current queue add it's adjacent coordinates, 8 positions into adjQueue,
  if and only if it is not visited. 
-3) Calculate the step+= 1 and swap with current queue once loop is completed, when one queue is completely poped, if and only if targetFound is False.
+3) Calculate the step+= 1 and swap with current queue once loop is completed, 
+when one queue is completely poped, if and only if targetFound is False.
 4) Once target reached break the loop and update targetFound.
 """
 from typing import List
