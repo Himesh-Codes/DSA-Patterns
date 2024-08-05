@@ -2,6 +2,12 @@
 
 Dynamic programming is a method used in computer science to solve optimization problems by breaking them down into simpler subproblems and storing the solutions to those subproblems to avoid redundant calculations. It's particularly useful when the problem can be divided into overlapping subproblems, allowing for re-use of solutions.
 
+## Thought Process
+
+Find the bruteforce solution for a problem and see how we can do create and memoize the subproblems.
+That will help the suceeding/preceeding subproblem to help it's calculation based on output from
+suceeding/preceeding DP, respectively for top to bottom / bottom to top approach.
+
 In the context of data structures and algorithms, dynamic programming often comes into play when solving problems like:
 
 - Fibonacci sequence: Calculating Fibonacci numbers can be optimized using dynamic programming to avoid redundant recursive calls.
@@ -18,5 +24,6 @@ In all these cases, dynamic programming helps avoid redundant calculations by st
 
 References:
 
+- How to approach DP: https://www.linkedin.com/feed/update/urn:li:activity:7218822388912676864/
 - Common DP patterns https://www.youtube.com/watch?v=mBNrRy2_hVs&t=36s
 - DP patterns sheet - https://docs.google.com/spreadsheets/d/14VDA1KjrHQ_B3Zz763J4KCcK0l0r3AE6wS085Xp08bU/edit?gid=0#gid=0

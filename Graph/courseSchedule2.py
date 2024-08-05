@@ -88,6 +88,22 @@ Here 1 is before 2 in order, 2 before 3 inorder, 3 before 1 in order, since the 
 Time Complexity: O(E+V)
 Space Complexity: O(N)
 
+Intuition/Approach
+------------------
+If we build the prerequisites list for a course while doing DFS on it the end of DFS one course will 
+have no prerequisite that can add in order 1.
+numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
+
+1---> 0 <--- 2 <--- 3 --> 1
+
+This means if we build prereq list nothing will be there for 0.
+DFS from 3 can go 2 already visited then 1 already visted that means and deep traversal in DFS can see
+what is order, while backtrack we can add each node into order.
+
+Find Cycle (for prereq)?
+If we maintain a DFS track we can see the element in cycle, once backtrack we can clear from DFS track.
+
+
 Solution 
 ---------
 Using Topological Sort

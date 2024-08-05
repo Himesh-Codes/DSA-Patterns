@@ -28,6 +28,17 @@ Constraints:
 The number of nodes in the tree is in the range [1, 104].
 -100 <= Node.val <= 100
 
+Intuition/Approach
+-------------------
+If we know the diameter of the leaf node that is 0, (left -1 + right -1 + 2 edges).
+Diameter is the left node length + right node length + 2 (edges to left and right child).
+Once lower part is calculated we need to calculate upper part, doing DFS and track back.
+Always see update the maxDiameter always one DFS completed on left and right node.
+
+But note that either maximum in left / right we can take from current node,
+so take left / right length and add 1 (includes current node) to return len on back track.
+After root element you will get maxDiameter in global variable return.
+
 Solution
 --------------
 Longest path between two node is the diameter of the tree.

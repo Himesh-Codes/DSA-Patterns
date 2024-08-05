@@ -2,6 +2,9 @@
 
 A pattern based DSA approaches exploration and study new techniques on the way.
 
+"If you can't solve a problem just visualize it so that you will be getting an idea, how basically
+the human approach the problem"
+
 ## Pattern Based Roadmap
 
 https://neetcode.io/roadmap
@@ -11,6 +14,10 @@ https://neetcode.io/roadmap
 `Draw a picture of the problem to understand how it work`
 `Split problem into small subproblem and solve each of them.`
 `Visualize Every Problem, looks how a human solve this and from there thinks on pattern and logic to implement.`
+
+### Common Used Alogorithms
+
+- 25 Algos: https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b
 
 ### Other reference sources
 
@@ -26,6 +33,7 @@ https://neetcode.io/roadmap
 - Blind 75 Solutions: https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
 - AI tool : https://roadmap.sh/
 - https://www.linkedin.com/posts/alexandre-zajac_softwareengineering-coding-programming-activity-7181538559999238144-lwW8?utm_source=share&utm_medium=member_desktop
+- Google prep : https://github.com/jwasham/coding-interview-university/blob/main/README.md#bitwise-operations
 
 ### Company wise Search Qns
 

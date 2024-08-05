@@ -25,7 +25,29 @@ Example 3:
 
 Input: coins = [1], amount = 0
 Output: 0
- 
+
+Intuition / Thought Process
+-----------------------------
+All about how human thinks, if we know what is minimum coin need to produce an amount lesser than 
+currentamount, we can easily calculate currentamount (see what is min coin needed for currentamount - coin).
+
+calculate balance we do amount - coin and see how much coins need to give
+for each balance amount, eg: 9 - 5 , balance 4, if we have 1, 2, 5 coins, we see for amount 4, 4-2 & 4-1
+possible but minimum coins are always 4-2.
+
+For every amount 0 --- amount, we can calculate minimum coins needed for the gain that amount.
+
+eg: if we have coins [1,2] and we need to see our current amount 3, how much min coin needs.
+It will be easy for us if we already know 3 - coin, eg: 3 - 2 = 1, if we know how much min coin
+needs to accumulate an amount 1 with given coins. 
+
+So if we use top down approach with DP on amounts, previous amounts are subproblems of current amount.
+Becuase when calculate balance we do amount - coin and see how much more amount need to give.
+
+As we know minimum coin for gaining amount 0 is 0. DP[0] = 0.
+So if we know how much min coin we need to make an amount from existing coin. It will be usefull to
+find an amount > current amount, min coin needed.
+
 Solution
 ----------
 Use of dynamic programming is optimised approach.

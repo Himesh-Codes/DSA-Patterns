@@ -29,6 +29,12 @@ Constraints:
 All the integers in nums are unique.
 nums is sorted in ascending order.
 
+Intuition
+---------
+On binary search we use left and right pointers divide and move according to mid point value.
+If target greater than mid value go right. left = mid+1
+If target less than mid value go left. right = mid-1
+
 Solution
 ----------------
 Since array is sorted we use the divide and conquer approach is basic for binary search

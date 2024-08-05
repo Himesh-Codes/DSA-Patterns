@@ -30,6 +30,16 @@ Solution
 Using the STACK as a way find how much a reactangle is extensible and define boundary.
 Variables used, STACK({index, value}), MAX_AREA.
 
+Intuition / Approach
+---------------------
+On traversing every block or array element, we should see how much it can be extended to previous blocks.
+We now pop out from stack if and only if previous block is greater than current block,
+pop until which block current block can extends, and once done the last poped index
+is added as index ref along with value in stack (in format {"index":n, "value":v}).
+As we know we already know how much left a block can extend.
+Now whatever in stack we need to calculate area from len of array and get right side extension also.
+Now updating max will get us maximum area.
+
 Steps
 ---------
 1) On traversing each item in array we are looking for a scope until what limit, the specific block can be

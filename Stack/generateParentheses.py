@@ -20,6 +20,29 @@ Constraints:
 
 1 <= n <= 8
 
+Intuition
+-----------
+We know how much bracket should be there, so either you can add open bracket or close bracket.
+Close bracket can only added if open bracket count > closed bracket count.
+eg:   Bracket count = 3
+
+                    (
+                /      \
+open =2,close=1(        )       open = 1, closed =1 , now only one option is adding open
+now one we have/ \       \
+2 options      (  )       (
+
+According to the open bracket count in the stack you can add close bracket.
+As per above we can see two possible ways according to open, close bracket count.
+open > closed then we can return and add brackets into result.
+
+Using recursion: 
+We can check if opencount < n, add open bracket to stack, do recursion
+At this same point we have other option to add close bracket into stack, if anly only if
+open>closed count.
+So while above opencount increasing recursion completed, 
+on backtrack remove the existing "(" from stack and add our other option ")" and recurse.
+
 Solution 1
 --------------
 Using recursion, stack.

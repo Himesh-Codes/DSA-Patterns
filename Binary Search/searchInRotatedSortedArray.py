@@ -36,6 +36,29 @@ All values of nums are unique.
 nums is an ascending array that is possibly rotated.
 -104 <= target <= 104
 
+Intuition
+----------
+Still we use the binary search, but need to see some edge cases possibilities.
+Whenever mid is calculated we need to find the mid is in small array (rotated right) or large array (left)
+just by compare mid >= left (means mid element is large than left), this is in large array
+eg: 0 2 4 6 -11 -8 -1, here 6 is mid and 6 >= 0 (M >= L), then 6 is in large array.
+
+Imagine mid is -11, so here mid (-11) < left (0).
+So our base case is if in large array, we will move in right if (left = mid+1):
+1) target > mid (common usecase), imagine maybe a target 9 and mid is 6 in above example.
+2) left > target (special usecase, if largest array left ie, smallest in largest array is greater 
+then no point we have to look into the large array) here imagine target -8 and mid 6, so leftmost 0
+
+If in smallest array(right rotated array), ie, mid < left:
+Imagine mid is -11 and left is 0, -11 < 0, so our mid in small array.
+When we move in left from right (right = mid-1) rotated small array;
+eg: 0 2 4 6 -15 -11 -8 -1,
+1) target < mid (base case), imagine -15 is target and -11 is mid so we need (right = mid-1)
+2) right < target, (largest in small array is lesser then no point to look in right array.)
+Imagine target is 4 and mid = -11, rightmost -1 < 4, so no point we need to look in this right array
+so move left (r = mid-1).
+
+
 Solution
 ----------
 Search in sorted array we can use the binary search, since the structure will be of the binary tree.

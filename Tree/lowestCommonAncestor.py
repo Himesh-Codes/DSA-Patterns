@@ -37,6 +37,22 @@ All Node.val are unique.
 p != q
 p and q will exist in the tree.
 
+Intuition / Approach
+---------------------
+We should do a DFS and go to each and every node, and see matching value node coming or not, 
+if matching return the node, else if root NULL return null.
+
+NOTE: The idea is if the nodes is equals to value, we can return that up back to the tree, on backtrack.
+Else we return NULL, that means on backtrack in corresponding subtree (left/right), element is not present.
+
+Now at each node DFS backtrack we need to see left or right have value.
+1) If both left and right there the current node is the result (means the lowest common ancestor where
+both nodes can reach).
+2) If not if left only return that, else if right only return right.
+3) If both are NULL that means not found on both left and right, we return NULL.
+So at root node either we get a parent node itself / NULL that means no match found (either on left/right
+or maybe both) / left and right present that means root node is the parent, we should return.
+
 Solution 
 --------
 We visit each and every node in tree with a DFS.

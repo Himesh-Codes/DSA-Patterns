@@ -19,6 +19,17 @@ Output: true
 Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
 Output: false
 
+Intuition
+----------
+Binary search first on row range then inside a row.
+Since array is monotonically increasing in row wise and inside a row. 
+We can find target belongs to which row, by seeing target in between mid leftmost mid[0] and 
+mid rightmost, mid[len(arr[mid])-1]. If found a range then return row index.
+
+Now if we do binary search on the row index we found.
+
+Time Complexity: O(log(m*n))
+
 Solution
 -----------
 Use the binary search in rowwise range, and then on specific row. Since we can see the array is monotonically increasing.

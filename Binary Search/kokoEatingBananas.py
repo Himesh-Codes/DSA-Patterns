@@ -34,6 +34,18 @@ Constraints:
 piles.length <= h <= 109
 1 <= piles[i] <= 109
 
+Intuition
+----------
+Min speed of Koko eating banana is 0 and maximum is max in piles.
+eg: 1,2,5,11 here left = 0 and right = 11, as max is 11,
+We can do a binary search on this speed and see;
+time = ceil(pile[index] / mid), since if 3 is in pile and 2 is mid then in 1.5 hours Koko eats banana.
+But according to question it can only be in same pile until ceil(1.5), ie, 2 hours completed.
+
+Once we complete a loop with speed see, hours >= 0, ie, if time left or not and pileIndex should be last.
+Then if we can move left (r = mid-1), else hours not positive means time is less for this speed, then
+increase speed move right (l = mind + 1).
+
 Solution
 ----------
 Pattern identified: find minimum in a sorted array, here the banana-per-hour time array with specific condition.

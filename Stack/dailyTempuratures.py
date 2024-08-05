@@ -31,6 +31,12 @@ Solution (Bruteforce)
 For each tempurature item in the array we will traverse into it's succeding right index elements and find greater.
 Worst cases might be the O(n2).
 
+Intuition
+----------
+Using a stack we can backtrack previous visited temp (here we store the index), and see last element is
+lesser than current temp, then popout stack until we breaks this condition.
+And while pop-out alter the resultant array index with value of waiting time.
+
 Solution (Optimised) - Stack is useful for checking, backtracking the ordered entry.
 ---------------
 Using a stack to backtrack the previous lower tempurature.

@@ -21,6 +21,13 @@ Example 2:
 Input: nums = [0,3,7,2,5,8,4,6,0,1]
 Output: 9
 
+Intuition
+----------
+The consecutive sequence can be find once we find the leftmost element of sequence.
+So if we check on every element, element - 1 is not exist in array that is the starting of sequence.
+And iterate the number + 1 until, number + 1 not exist in array.
+So it visit probably O(n + n -1) times in array, ie O(N) time complexity.
+
 Solution
 --------------
 In real we will look on a number and check it have a predecessor or successor, and check the start of sequence and add all consequtive successors after.

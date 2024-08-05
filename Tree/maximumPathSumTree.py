@@ -67,6 +67,18 @@ MAX_SO_FAR = (37, 11, 11+9+30, 11+9, 11+30)  = 50
 SUM = (11, 11+30, 11+9) = 44.
 Once reached root we return max so far (MAX_SO_FAR).
 
+Intuition / Approach
+---------------------
+DFS approach until leaf node and take decision in bottom up approach backtracking.
+We can leverage on Kadane's algo, keep max_so_far global and update on every backtrack.
+In each node our decision would be according to current_sum.
+current_sum can be maximum of either left sum or right sum, becuase we can return only one path sum.
+or current_sum can be current node, leverage on Kadane's if both right and left sum less than current node.
+No point that we need go down and add them to current sum.
+
+After every calculation in backtrack we see max of current_sum (either left/ right/ node/ total tree), is
+giving us the max sum.
+
 Steps
 --------
 1) Do DFS until reach leaf nodes.

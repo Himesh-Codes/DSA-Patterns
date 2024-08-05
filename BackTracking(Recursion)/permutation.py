@@ -29,6 +29,20 @@ Constraints:
 -10 <= nums[i] <= 10
 All the integers of nums are unique.
 
+Intuition
+----------
+Recursive approach, until we find element with 1 length as return the permutation.
+Idea is to have an idle element pop from first index of array,
+keep a loop (until len N) to see we popout first element and create it's sub permutations.
+Why loop until N becuase if n = 3 we need to shuffle the order and add idle element to end of array
+ie, For [1,2,3] [2,3,1], [3,2,1], we need to find the permutations, taking 1, 2, 3 as idle elements
+respectively.
+So after permutation we get [2,3], [3,2] for idle num 1.
+[3,1], [1,3] for idle num 2.
+[1,2], [2,1] for idle num 3.
+Adding idle number at end for every permute recursion we get comb results
+[2,3,1], [3,2,1], [3,1,2], [1,3,2], [1,2,3], [2,1,3] is the result.
+
 Solution
 -----------
 Decision tree kind of approach where we can pick one element first and other element so on.

@@ -35,6 +35,16 @@ Ref: https://www.youtube.com/watch?v=TGveA1oFhrc
 
 Complexity: O(NlogN)
 
+Intuition
+-----------
+Using merge sort find the mid (using fast and slow pointer), slow will be at middle if fast is null or 
+fast is end node.
+3 steps:
+1) Find mid, left and right list decoupled, with mid.next = None
+2) Find left and right sorted linked list, edge case is return if head is None or 
+head.next is None(ie only one single node left)
+3) Merge left and right sorted list toghether.
+
 Solution
 ---------
 Using merge sort give O(nlogn) solution, but memory is O(logN)

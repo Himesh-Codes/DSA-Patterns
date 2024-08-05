@@ -52,6 +52,18 @@ Constraints:
 -1000 <= nums[i] <= 1000
 nums[i] != 0
 
+Intuition
+-----------
+Fast(2x steps at a time, initially at second element) and slow pointer (1x, initially at first element).
+If loop is there before the fast loop finish iteration in array last element, both fast == slow, meets.
+
+According to floyd's equation, Distance traveled by fast pointer = 2 * (Distance traveled by slow pointer)
+If we place slow at head and fast at point both meets, and traverse fast (1x) and slow (1x), then we find
+the start of the loop where fast == slow meets.
+So we need to make previous node next as null.
+But to find the length we can start slow pointer from place fast == slow meets and keep counter until they
+meet again.
+
 Solution(Fast/Slow Pointer)
 ----------------------------
 Cycle is found if and only 3 conditions satified.

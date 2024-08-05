@@ -3,6 +3,13 @@ Merge Sort
 Difficulty: Medium
 https://leetcode.com/problems/sort-an-array/description/
 
+Intuition
+-----------
+By doing divide and conquer we come at end of the recursion with edge case subarray with one element.
+Then combine the 2 elements in 2 array with checking greater or less and put it in the sorted asc order.
+Now backtrack and combine next 2 elements in left subarray and right subarray.
+Until one array finished and join rest of elements in other array at end of result array.
+
 Solution (Divide & Conquer/ Merge Sort)
 ---------------------------------------
 1) Divide the array into two equal halfs, leftarray and rightarray.
