@@ -88,8 +88,9 @@ class Solution:
         # Pass 2:
         rets = [0, 0]  # this list stores the two numbers we will return
         for num in nums:
-            if (num & diff) == 0:  # the bit is not set
-                rets[0] ^= num
+            if (num & diff) == 0:  # the bit is not set 
+                # XOR the number will eliminate the repeat numbers into 0 and non repeating number stays.
+                rets[0] ^= num 
             else:  # the bit is set
                 rets[1] ^= num
 

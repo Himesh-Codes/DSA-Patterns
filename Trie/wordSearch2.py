@@ -31,7 +31,7 @@ To optimise the search with DFS, we need to get a data structure which can be se
 word in every position: We use TRIE (aka Prefix Tree).
 
 
-
+https://www.youtube.com/watch?v=asbcE9mZz_U
 Solution (Trie)
 ------------
 trick: I though use trie to store the grid, reverse thinking, instead store dictionary words, 
