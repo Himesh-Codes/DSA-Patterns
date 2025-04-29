@@ -46,6 +46,49 @@ https://neetcode.io/roadmap
 - Leetcode discussion (search with year 2024) https://leetcode.com/discuss/interview-experience/1069708/Goldman-Sachs-Associate-or-3%2B-Years-Experience-or-Offer
 - Use Glassdoor to see any latest interview qns: https://www.glassdoor.co.in/Interview/Microsoft-Interview-Questions-E1651.htm
 
+## Strategy
+``````
+Base rules of DSA and human psychology:
+
+1. Never jump from category to category and solve random problems - your brain will never form a pattern in chaos.
+
+2. Never ever attempt the first problem on your own from any given category - 
+just knowing how linked list works is not enough data for your mind to solve a tricky linked list problem, 
+just like how knowing permutation formula is not enough to solve a HOTs permutation problem from NCERT. 
+You will jeopardize your confidence and have no interest further to learn.
+
+Best practice/trick:
+
+Step 1: Let us go to any given category, say Graphs. DO NOT attempt the first problem on your own.
+ Watch neetcode solve first 5 or 6 questions till your mind has a grasp of what graph based problems 
+ and solutions look like. Observation before jumping into it is key.
+
+Step 2: Now that your mind has gotten a feel of the pattern, come to 7th question for example 
+and just attempt the approach. DO NOT CODE. verify if your intuition aligns with neetcode. 
+Do that for next few problems till you feel somewhat confident that you are able to do it.
+
+Step 3: Rewrite all the 10 problems you have watched videos of so far, yourself, 
+since you know the solutions already.
+
+Step 4: once you are done with previous 3 steps, go to problem number 11 and attempt this completely on your own,
+ from intuition to code and verify. You will make some mistakes but that is ok, you are close, keep going! 
+ Keep doing this for every category till you feel confident in each of them.
+
+Step 5: Great! you feel like you can do this! revise all the problems you have done in all categories.
+
+Step 6: Start solving one completely new problem per day to see if you are able to put it in a category 
+and then find the right solution. Do this till you feel somewhat confident to give interviews.
+
+This method is a lot faster than the traditional "Work hard till you figure it out" method. 
+Also, not to mention, the number of problems a person needs to build pattern varies from person to person, 
+so the numbers I have mentioned are averge numbers.
+
+Try this for atleast one category and let me know how it works out in DMs! Works best on following categories: 
+Graphs, Trees, Heaps, Tries, Intervals, Stacks, Sliding window, Linked list. 
+Rest of them need more number of problems and practice.
+
+``````
+
 ## Most Use DSA Patterns
 
 ✅ Arrays
