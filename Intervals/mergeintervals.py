@@ -1,5 +1,6 @@
 """
 Merge Intervals
+
 Difficulty: Medium
 https://leetcode.com/problems/merge-intervals/description/
 
