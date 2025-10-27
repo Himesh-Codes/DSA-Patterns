@@ -71,8 +71,25 @@ class Solution:
 
         return nums
 
-# Testing
-sol = Solution()
-print(sol.quicksort([3, 1, 5, 2, 4]))
-print(sol.quicksort([0,1,0,3,2,3,0]))
-print(sol.quicksort([10,9,2,5,3,7,101,18]))
+# Testing contained in a function
+def test_quicksort() -> None:
+    """Run deterministic quicksort tests and assert expected outputs."""
+    sol = Solution()
+
+    res1 = sol.quicksort([3, 1, 5, 2, 4])
+    print(res1)
+    assert res1 == [1, 2, 3, 4, 5], f"Expected [1, 2, 3, 4, 5], got {res1}"
+
+    res2 = sol.quicksort([0, 1, 0, 3, 2, 3, 0])
+    print(res2)
+    assert res2 == [0, 0, 0, 1, 2, 3, 3], f"Expected [0, 0, 0, 1, 2, 3, 3], got {res2}"
+
+    res3 = sol.quicksort([10, 9, 2, 5, 3, 7, 101, 18])
+    print(res3)
+    assert res3 == [2, 3, 5, 7, 9, 10, 18, 101], f"Expected [2, 3, 5, 7, 9, 10, 18, 101], got {res3}"
+
+    print("All quicksort tests passed")
+
+
+if __name__ == "__main__":
+    test_quicksort()
